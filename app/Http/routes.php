@@ -11,6 +11,16 @@
 |
 */
 
+//Website routes
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('fetch', ['uses' => 'ScrapeController@scrape']);
+
+//API routes
+Route::group(['prefix' => 'api'], function(){
+    //Random quote
+
+    //Specific quote
 });
